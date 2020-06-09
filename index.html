@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EFLI Player Registration</title>
+    <!-- Main css -->
+    <link rel="stylesheet" href="./Content/style.css">
+
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container" id="roundborder">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="./Content/11811.png" alt="" id="roundborder1">
+
+                </div>
+                <div class="signup-form">
+                    <div class="form-group">
+                        <form class="register-form" id="register-form" onSubmit="show()">
+                            <h1><center><font size="+3"><span style="text-decoration: underline;">EFLI<br>PLAYER REGISTRATION</span></font></center></h1>
+                            <h2><font color="#000000" size="+1" style="text-underline-position: below"><center>Add Player Details</center></font></h2>
+                            <divr></divr>
+                            <button id="roundborder2" style="background: #27883E" class="collapsible" disabled><em>Player Personal Details:</em></button>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <div class="form-input">
+                                        <label for="first_name" class="required">First Name</label>
+                                        <input type="text" name="first_name" required id="firstname" placeholder="Please Enter First Name of Player">
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="middle_name">Middle name</label>
+                                        <input type="text" name="middle_name" id="middlename" placeholder="Please Enter Middle Name of Player">
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="last_name" class="required">Last name</label>
+                                        <input type="text" name="last_name" required id="lastname" placeholder="Please Enter Last Name of Player">
+                                    </div>
+
+                                    <div class="form-input">
+                                        <label for="phone_number" class="required">Phone number</label>
+                                        <input type="text" name="phone_number" required id="phonenumber" placeholder="Enter Player's Contact Number">
+                                    </div>
+
+                                    <div class="form-input">
+                                        <label for="email" class="required">Email ID</label>
+                                        <input type="email" name="email" required id="email" placeholder="Enter Player's Email ID">
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="DOB" class="required">Date of Birth</label>
+                                        <input type="text" name="birthday" id="birthday" placeholder="MM/DD/YYYY" />
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="height" class="required">Player's Height</label>
+                                        <input type="text" required name="height" id="height" placeholder="Enter Player's Height in centimeter (cm)" />
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="weight" class="required">Player's Weight</label>
+                                        <input type="text" required name="weight" id="weight" placeholder="Enter Player's Weight in Kilogram (kg)" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-input">
+                                        <label for="middle_name">Upload Player Image</label>
+                                        <input type="file" name="image" id="image" accept="image/*">
+                                    </div>
+
+                                    <div class="form-radio">
+                                        <div class="label-flex">
+                                            <label for="gender">Gender</label>
+                                        </div>
+                                        <div class="form-radio-group">
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="gender" id="male" value="male" checked="">
+                                                <label for="male">Male</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="gender" id="female" value="female">
+                                                <label for="female">Female</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="gender" id="others" value="others">
+                                                <label for="others">Others</label>
+                                                <span class="check"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="fathername" class="required">Father's Name</label>
+                                        <input type="text" name="fathername" required id="fathername" placeholder="Please Enter Father's Name of Player">
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="fatherprofession">Father's Profession</label>
+                                        <input type="text" name="fatherprofession" id="fatherprofession" placeholder="Please Enter Father's Profession of Player">
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="mothername">Mother's Name</label>
+                                        <input type="text" name="mothername" id="mothername" placeholder="Please Enter Mother's Name of Player">
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="motherprofession">Mother's Profession</label>
+                                        <input type="text" name="motherprofession" id="motherprofession" placeholder="Please Enter Mother's Profession of Player">
+                                    </div>
+
+                                    <div class="form-select">
+                                        <div class="label-flex">
+                                            <label for="bloodgroup" class="required">Blood Group</label>
+
+                                        </div>
+                                        <div class="form-radio-group">
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="bloodgroup" value="O+ve" id="O+ve" checked="">
+                                                <label for="O+ve">O+ve</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="bloodgroup" value="O-ve" id="O-ve">
+                                                <label for="O-ve">O-ve</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="bloodgroup" value="A+ve" id="A+ve">
+                                                <label for="A+ve">A+ve</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="bloodgroup" value="A-ve" id="A-ve">
+                                                <label for="A-ve">A-ve</label>
+                                                <span class="check"></span>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-radio-group">
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="bloodgroup" value="B+ve" id="B+ve">
+                                                <label for="B+ve">B+ve</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="bloodgroup" value="B-ve" id="B-ve">
+                                                <label for="B-ve">B-ve</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="bloodgroup" value="AB+ve" id="AB+ve">
+                                                <label for="AB+ve">AB+ve</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="bloodgroup" value="AB-ve" id="AB-ve">
+                                                <label for="AB-ve">AB-ve</label>
+                                                <span class="check"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <divr></divr>
+
+                            <button id="roundborder3" style="background: #27883E" class="collapsible" disabled><em>Player Residential Details:</em></button>
+                            <divr></divr>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <div class="form-input">
+                                        <label for="Address" class="required">Address</label>
+                                        <textarea name="Address" required id="address" class="form-input" placeholder="Please Enter Player's Address"></textarea>
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="city">City</label>
+                                        <input type="text" name="city" id="city" placeholder="Please Enter Player's City">
+                                    </div>
+
+                                    <div class="form-input">
+                                        <label for="pincode" class="required">Pin Code</label>
+                                        <input type="number" required name="pincode" id="pincode" placeholder="Please Enter 6 digit Pin Code">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-input">
+                                        <label for="state" class="required">State</label>
+                                        <input type="text" required name="state" id="state" placeholder="Please Enter Player's State">
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="country" class="required">Country</label>
+                                        <input type="text" required name="country" id="country" placeholder="Please Enter Player's Country">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button id="roundborder4" style="background: #27883E" class="collapsible" disabled><em>Player Skills Details:</em></button>
+                            <divr></divr>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <div class="form-input">
+                                        <label for="position">Player Playing Position </label>
+                                        <input type="text" name="position" id="position" placeholder="Please Enter Playing Position">
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="enrollmentno">Enrollment Number</label>
+                                        <input type="text" name="enrollmentno" id="enrollmentno" placeholder="Please Enter Player's Enrollment Number">
+                                    </div>
+                                    <div class="form-radio">
+                                        <div class="label-flex">
+                                            <label for="playingfor">Playing For</label>
+                                        </div>
+                                        <div class="form-radio-group">
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="playingfor" value="University" id="university" checked="">
+                                                <label for="university">University</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="playingfor" value="School" id="school">
+                                                <label for="school">School</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="playingfor" value="Pro" id="pro">
+                                                <label for="pro">Pro</label>
+                                                <span class="check"></span>
+                                            </div>
+                                            <div class="form-radio-item">
+                                                <input type="radio" name="playingfor" value="Club" id="club">
+                                                <label for="club">Club</label>
+                                                <span class="check"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="uniname">Player's University/ School Name</label>
+                                        <input type="text" name="uniname" id="uniname" placeholder="Please Enter Player's University/ School Name">
+                                    </div>
+
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-input">
+                                        <label for="jerseyno">Player's Jersey Number</label>
+                                        <input type="text" name="jerseyno" id="jerseyno" placeholder="Please Enter Player's Jersey Number">
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="professionlevel">Profession Level</label>
+                                        <input type="text" name="professionlevel" id="professionlevel" placeholder="Please Enter Player's Profession Level">
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="dateofjoining" class="required">Date of Joining</label>
+                                        <input type="text" required name="birthday" id="dateofjoining" placeholder="MM/DD/YYYY">
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="roundborder5" style="background: #27883E" class="collapsible" disabled><em>Player Merchandise Details</em></button>
+                            <divr></divr>
+                            <div class="form-group">
+								
+								<div class="form-input">
+                                    <label for="helmetsize">Player Helmet Size</label>
+                                    <input type="text" name="helmetsize" id="helmetsize" placeholder="Please Enter Player's Helmet Size in range (S - XL)">
+                                </div>
+								
+								<div class="form-input">
+                                    <label for="shoulderpadsize">Player Shoulder Pad Size</label>
+                                    <input type="text" name="shoulderpadsize" id="shoulderpadsize" placeholder="Please Enter Player's Shoulder Pad Size in range (S - XL)">
+                                </div>
+
+                                <div class="form-input">
+                                    <label for="uppersize">Player Upperwear Size</label>
+                                    <input type="text" name="uppersize" id="uppersize" placeholder="Please Enter Player's Upperwear Size in range (S - XXXL)">
+                                </div>
+                                <div class="form-input">
+                                    <label for="uppersize">Player Lowerwear Size</label>
+                                    <input type="text" name="lowersize" id="lowersize" placeholder="Please Enter Player's Lowerwear Size in range (28 inch - 40 inch )">
+                                </div>
+
+                                <div class="form-input">
+                                    <label for="position">Player's Shoe Size</label>
+                                    <input type="text" name="shoesize" id="shoesize" placeholder="Please Enter Player's Shoe Size in UK/IN Size">
+                                </div>
+
+                            </div>
+                            <button id="roundborder6" style="background: #27883E" class="collapsible" disabled><em>Player Emergency Details</em></button>
+                            <divr></divr>
+                            <div class="form-group">
+                                <div class="form-input">
+                                    <label for="contactname" class="required">Contact Person Name</label>
+                                    <input type="text" required name="contactname" id="contactname" placeholder="Please Enter Emergency Contact Person Name">
+                                </div>
+                                <div class="form-input">
+                                    <label for="contactnumber" class="required">Contact Person Mobile Number</label>
+                                    <input type="text" name="contactnumber" required id="contactnumber" placeholder="Please Enter Emergency Contact Number">
+                                </div>
+                                <div class="form-input">
+                                    <label for="contactrelation">Emergency Contact Relation</label>
+                                    <input type="text" name="contactrelation" id="contactrelation" placeholder="Please Enter Emergency Contact Relation">
+                                </div>
+                            </div>
+
+
+
+                            <divr></divr>
+                            <div class="grid-container"></div>
+                            <div class="form-submit">
+                                <div class="form-row">
+                                    <input type="checkbox" required name="checkbox" value="true" id="agreement" />
+                                    <label for="agreement">I agree to the Terms and Conditions and Privacy Policy</label>
+                                </div>
+                                <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+                            </div>
+
+
+                            <script src="https://code.jquery.com/jquery-3.4.1.js" type="text/javascript"></script>
+                            <script type="text/javascript">
+            function person(firstname,lastname,middlename,image,uniname,fathername,fatherprofession,fatheremail,fathermobile,mothername,motherprofession,phonenumber,email,address,city,state,pincode,country,position,jerseyno,birthday,bloodgroup,gender,height,weight,dateofjoining,enrollmentno,professionlevel,playingfor,classbatch,classbatchyear,helmetsize,shoulderpadsize,uppersize,lowersize,shoesize,contactname,contactnumber,contactrelation,agreement) {
+                this.C_p_firstname = firstname;
+                this.C_p_middlename = middlename;
+                this.C_p_lastname = lastname;
+                this.C_p_mobile_number = phonenumber;
+				this.C_p_university_name = uniname;
+                this.C_p_email_id = email;
+                this.C_p_Birth_date = birthday;
+                this.C_p_photopath = image;
+                this.C_p_gender = gender;
+                this.C_p_fathers_name = fathername;
+                this.C_p_fathers_profession = fatherprofession;
+				this.C_p_fathers_mobile_no = fathermobile;
+				this.C_p_fathers_email_id = fatheremail;
+                this.C_P_mothers_name = mothername;
+                this.C_p_mothers_profession = motherprofession;
+                this.C_p_blood_group = bloodgroup;
+				this.C_p_height = height;
+				this.C_p_weight = weight;
+                this.C_p_address = address;
+                this.C_p_city = city;
+                this.C_p_location_pincode = pincode;
+                this.C_p_state = state;
+                this.C_p_nationality = country;
+                this.C_p_position = position;
+                this.C_p_enrollment_number = enrollmentno;
+                this.C_p_collage_school_club_pro_name = playingfor;
+                this.C_p_jersey_number = jerseyno;
+                this.C_p_professional_level = professionlevel;
+                this.C_p_date_of_joining = dateofjoining;
+				this.C_p_class_batch = classbatch;
+				this.C_p_class_batch_playing_year = classbatchyear;
+				this.C_p_helmet_size = helmetsize;
+				this.C_p_shoulder_pad_size = shoulderpadsize;
+                this.C_p_upper_size = uppersize;
+                this.C_p_lower_size = lowersize;
+                this.C_p_shoe_size = shoesize;
+                this.C_p_emergency_contacts_firstperson_name = contactname;
+                this.C_p_emergency_contacts_firstperson_contact = contactnumber;
+                this.C_p_emergency_contacts_firstperson_relation = contactrelation;
+                this.C_p_undertaking_agreement_signed = agreement;
+
+
+            }
+            function show() {
+                var firstname1 = document.getElementById('firstname').value;
+                var middlename1 = document.getElementById('middlename').value;
+                var lastname1 = document.getElementById('lastname').value;
+                var phonenumber1 = document.getElementById('phonenumber').value;
+                var uniname1 = document.getElementById('uniname').value;
+                var email1 = document.getElementById('email').value;
+                var birthday1 = document.getElementById('birthday').value;
+                var image1 = document.getElementById('image').value;
+                var gender1 = document.querySelector('[name=gender]:checked').value;
+                var fathername1 = document.getElementById('fathername').value;
+                var fatherprofession1 = document.getElementById('fatherprofession').value;
+				var fathermobile1 = null;
+				var fatheremail1 = null;
+                var mothername1 = document.getElementById('mothername').value;
+                var motherprofession1 = document.getElementById('motherprofession').value;
+                var bloodgroup1 = document.querySelector('[name=bloodgroup]:checked').value;
+                var height1 = document.getElementById('height').value;
+                var weight1 = document.getElementById('weight').value;
+                var address1 = document.getElementById('address').value;
+                var city1 = document.getElementById('city').value;
+                var pincode1 = document.getElementById('pincode').value;
+                var state1 = document.getElementById('state').value;
+                var country1 = document.getElementById('country').value;
+                var position1 = document.getElementById('position').value;
+                var enrollmentno1 = document.getElementById('enrollmentno').value;
+                var playingfor1 = document.querySelector('[name=playingfor]:checked').value;
+                var jerseyno1 = document.getElementById('jerseyno').value;
+                var professionlevel1 = document.getElementById('professionlevel').value;
+                var dateofjoining1 = document.getElementById('dateofjoining').value;
+				var classbatch1 = null;
+				var classbatchyear1 = null;
+				var helmetsize1 = document.getElementById('helmetsize').value;
+				var shoulderpadsize1 = document.getElementById('shoulderpadsize').value;
+                var uppersize1 = document.getElementById('uppersize').value;
+                var lowersize1 = document.getElementById('lowersize').value;
+                var shoesize1 = document.getElementById('shoesize').value;
+                var contactname1 = document.getElementById('contactname').value;
+                var contactnumber1 = document.getElementById('contactnumber').value;
+                var contactrelation1 = document.getElementById('contactrelation').value;
+                var agreement1 = document.getElementById('agreement').value;
+
+                var obj = new person(firstname1,lastname1,middlename1,image1,uniname1,fathername1,fatherprofession1,fatheremail1,fathermobile1,mothername1,motherprofession1,phonenumber1,email1,address1,city1,state1,pincode1,country1,position1,jerseyno1,birthday1,bloodgroup1,gender1,height1,weight1,dateofjoining1,enrollmentno1,professionlevel1,playingfor1,classbatch1,classbatchyear1,helmetsize1,shoulderpadsize1,uppersize1,lowersize1,shoesize1,contactname1,contactnumber1,contactrelation1,agreement1);
+                console.log(obj);
+                //var x = JSON.stringify(obj);
+                //document.write(x);
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:49773/api/players",
+                    dataType: "applicaton/json",
+                    data: obj,
+                    success: function (data, textStatus, xhr) {
+                        console.log(data);
+                        console.log('Data entered to database');
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        console.log('Error in Operation');
+                    }
+                });
+            }
+
+
+
+                            </script>
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script>
+$(function() {
+  $('input[name="birthday"]').daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    minYear: 1901,
+    maxYear: parseInt(moment().format('YYYY'),10)
+  }, function(start, end, label) {
+    var years = moment().diff(start, 'years');
+  });
+});
+    </script>
+</body>
+</html>
